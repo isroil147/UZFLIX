@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- navbar -->
+<section class="navbarsec">
+    <div class="navbar">
+        <div class="navlogo">
+            <h2>Home</h2>
+        </div>
+        <div class="navmenu">
+            <a href="{% url 'home' %}">HOME</a>
+        </div>
+    </div</section>
+
+
+    {% for i in obj %}
+    <video style="height: 1000px; width: 1300px;" src="{{i.video.url}}"></video>
+    {% endfor %}
+
+
+
+</html>
